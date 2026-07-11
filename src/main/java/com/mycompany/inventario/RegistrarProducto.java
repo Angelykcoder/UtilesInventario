@@ -8,14 +8,14 @@ package com.mycompany.inventario;
  *
  * @author LENOVO
  */
-public class Registros extends javax.swing.JFrame {
+public class RegistrarProducto extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Registros.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(RegistrarProducto.class.getName());
 
     /**
      * Creates new form Registros
      */
-    public Registros() {
+    public RegistrarProducto() {
         initComponents();
     }
 
@@ -208,7 +208,7 @@ public class Registros extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new Registros().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new RegistrarProducto().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
