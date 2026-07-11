@@ -32,6 +32,8 @@ public class Menu extends javax.swing.JFrame {
         btnIngreso = new javax.swing.JButton();
         btnSalida = new javax.swing.JButton();
         btnRegistro = new javax.swing.JButton();
+        btnRegistro1 = new javax.swing.JButton();
+        btnRegistro2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,8 +47,16 @@ public class Menu extends javax.swing.JFrame {
         btnSalida.setText("SALIDAS");
 
         btnRegistro.setFont(new java.awt.Font("Yu Gothic UI", 1, 36)); // NOI18N
-        btnRegistro.setText("REGISTROS");
+        btnRegistro.setText("NEW USER");
         btnRegistro.addActionListener(this::btnRegistroActionPerformed);
+
+        btnRegistro1.setFont(new java.awt.Font("Yu Gothic UI", 1, 36)); // NOI18N
+        btnRegistro1.setText("NEW PRODUCT");
+        btnRegistro1.addActionListener(this::btnRegistro1ActionPerformed);
+
+        btnRegistro2.setFont(new java.awt.Font("Yu Gothic UI", 1, 36)); // NOI18N
+        btnRegistro2.setText("NEW STUDENT");
+        btnRegistro2.addActionListener(this::btnRegistro2ActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -54,34 +64,38 @@ public class Menu extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(63, 63, 63)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(41, 41, 41)
-                        .addComponent(btnRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnSalida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnRegistro1, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
+                    .addComponent(btnRegistro2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnReporte, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(327, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(59, 59, 59)
-                    .addComponent(btnIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(376, Short.MAX_VALUE)))
+                    .addComponent(btnIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(328, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(59, Short.MAX_VALUE)
-                .addComponent(btnSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40))
+                .addGap(132, 132, 132)
+                .addComponent(btnSalida)
+                .addGap(18, 18, 18)
+                .addComponent(btnRegistro1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnRegistro)
+                .addGap(18, 18, 18)
+                .addComponent(btnRegistro2)
+                .addGap(18, 18, 18)
+                .addComponent(btnReporte)
+                .addContainerGap(45, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(63, 63, 63)
-                    .addComponent(btnIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(227, Short.MAX_VALUE)))
+                    .addComponent(btnIngreso)
+                    .addContainerGap(400, Short.MAX_VALUE)))
         );
 
         pack();
@@ -90,6 +104,14 @@ public class Menu extends javax.swing.JFrame {
     private void btnRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRegistroActionPerformed
+
+    private void btnRegistro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistro1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegistro1ActionPerformed
+
+    private void btnRegistro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistro2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegistro2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,6 +141,8 @@ public class Menu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIngreso;
     private javax.swing.JButton btnRegistro;
+    private javax.swing.JButton btnRegistro1;
+    private javax.swing.JButton btnRegistro2;
     private javax.swing.JButton btnReporte;
     private javax.swing.JButton btnSalida;
     // End of variables declaration//GEN-END:variables
