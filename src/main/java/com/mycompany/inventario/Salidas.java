@@ -39,6 +39,7 @@ public class Salidas extends javax.swing.JFrame {
         cantidad = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         especificaciones = new javax.swing.JComboBox<>();
+        btnmenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,6 +73,10 @@ public class Salidas extends javax.swing.JFrame {
         especificaciones.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
         especificaciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        btnmenu.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
+        btnmenu.setText("MENU");
+        btnmenu.addActionListener(this::btnmenuActionPerformed);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -96,6 +101,9 @@ public class Salidas extends javax.swing.JFrame {
                             .addComponent(producto, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(especificaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(60, 60, 60))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnmenu))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(16, 16, 16)
@@ -105,7 +113,9 @@ public class Salidas extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addContainerGap()
+                .addComponent(btnmenu)
+                .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(producto, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -155,6 +165,13 @@ public class Salidas extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cantidadActionPerformed
 
+    private void btnmenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmenuActionPerformed
+ Menu mp = new Menu();
+        mp.setVisible(true);
+
+        dispose();          // TODO add your handling code here:
+    }//GEN-LAST:event_btnmenuActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -181,6 +198,7 @@ public class Salidas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnmenu;
     private javax.swing.JTextField cantidad;
     private javax.swing.JComboBox<String> especificaciones;
     private javax.swing.JLabel jLabel1;

@@ -4,6 +4,8 @@
  */
 package com.mycompany.inventario;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author LENOVO
@@ -11,7 +13,8 @@ package com.mycompany.inventario;
 public class Login extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Login.class.getName());
-
+int intentos=0;
+    boolean bloqueado=false;
     /**
      * Creates new form Login
      */
@@ -49,7 +52,9 @@ public class Login extends javax.swing.JFrame {
 
         txtcontraseña.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
 
+        btnIngresar.setFont(new java.awt.Font("Segoe UI Historic", 0, 24)); // NOI18N
         btnIngresar.setText("INGRESAR");
+        btnIngresar.addActionListener(this::btnIngresarActionPerformed);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
         jLabel5.setText("Usuario:");
@@ -69,11 +74,11 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(txtusuario, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
                         .addComponent(txtcontraseña))
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnIngresar))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -131,6 +136,54 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
+        // Verificar si está bloqueado
+   if(bloqueado){
+    JOptionPane.showMessageDialog(this,
+        "El sistema está bloqueado.");
+    return;
+}
+// Obtiene los datos ingresados por el usuario en los campos del formulario
+String usuario = txtusuario.getText();
+String password = String.valueOf(txtcontraseña.getPassword());
+
+// Credenciales correctas
+String usuarioCorrecto = "gtivw";
+String passwordCorrecta = "frsecaida";
+
+if(usuario.equals(usuarioCorrecto) &&
+   password.equals(passwordCorrecta)) {
+
+    JOptionPane.showMessageDialog(this,
+        "Bienvenido " + usuario );
+
+    Menu mp = new Menu();
+    mp.setVisible(true);
+
+    dispose();
+
+} else {
+
+    intentos++;
+
+    JOptionPane.showMessageDialog(this,
+        "Usuario o contraseña incorrectos\nIntento "
+        + intentos + " de 3",
+        "ERROR",
+        JOptionPane.ERROR_MESSAGE);
+
+    txtcontraseña.setText("");
+
+    // Cerrar programa después de 3 intentos
+    if(intentos >= 3){
+
+        JOptionPane.showMessageDialog(this,
+            "Has superado los 3 intentos.\nEl programa se cerrará.");
+
+        System.exit(0);
+    }        // TODO add your handling code here:
+    }//GEN-LAST:event_btnIngresarActionPerformed
+    }
     /**
      * @param args the command line arguments
      */

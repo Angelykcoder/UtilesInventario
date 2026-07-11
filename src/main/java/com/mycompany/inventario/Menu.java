@@ -39,12 +39,15 @@ public class Menu extends javax.swing.JFrame {
 
         btnReporte.setFont(new java.awt.Font("Yu Gothic UI", 1, 36)); // NOI18N
         btnReporte.setText("REPORTES");
+        btnReporte.addActionListener(this::btnReporteActionPerformed);
 
         btnIngreso.setFont(new java.awt.Font("Yu Gothic UI", 1, 36)); // NOI18N
         btnIngreso.setText("INGRESOS");
+        btnIngreso.addActionListener(this::btnIngresoActionPerformed);
 
         btnSalida.setFont(new java.awt.Font("Yu Gothic UI", 1, 36)); // NOI18N
         btnSalida.setText("SALIDAS");
+        btnSalida.addActionListener(this::btnSalidaActionPerformed);
 
         btnRegistro.setFont(new java.awt.Font("Yu Gothic UI", 1, 36)); // NOI18N
         btnRegistro.setText("NEW USER");
@@ -63,24 +66,23 @@ public class Menu extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnSalida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnRegistro1, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
-                    .addComponent(btnRegistro2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnReporte, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(327, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(59, 59, 59)
+                .addGap(192, 192, 192)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(328, Short.MAX_VALUE)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnSalida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnRegistro1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnRegistro2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(195, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(132, 132, 132)
+                .addContainerGap(61, Short.MAX_VALUE)
+                .addComponent(btnIngreso)
+                .addGap(18, 18, 18)
                 .addComponent(btnSalida)
                 .addGap(18, 18, 18)
                 .addComponent(btnRegistro1)
@@ -90,28 +92,53 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(btnRegistro2)
                 .addGap(18, 18, 18)
                 .addComponent(btnReporte)
-                .addContainerGap(45, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(63, 63, 63)
-                    .addComponent(btnIngreso)
-                    .addContainerGap(400, Short.MAX_VALUE)))
+                .addGap(43, 43, 43))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroActionPerformed
-        // TODO add your handling code here:
+ RegistrarUsuarios ru = new RegistrarUsuarios();
+    ru.setVisible(true);
+
+    dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btnRegistroActionPerformed
 
     private void btnRegistro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistro1ActionPerformed
-        // TODO add your handling code here:
+ RegistrarProducto rp = new RegistrarProducto();
+    rp.setVisible(true);
+
+    dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btnRegistro1ActionPerformed
 
     private void btnRegistro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistro2ActionPerformed
-        // TODO add your handling code here:
+ NuevoEstudiante ne = new NuevoEstudiante();
+    ne.setVisible(true);
+
+    dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btnRegistro2ActionPerformed
+
+    private void btnIngresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresoActionPerformed
+ Ingresos ing = new Ingresos();
+    ing.setVisible(true);
+
+    dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btnIngresoActionPerformed
+
+    private void btnSalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalidaActionPerformed
+ Salidas salida = new Salidas();
+    salida.setVisible(true);
+
+    dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSalidaActionPerformed
+
+    private void btnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteActionPerformed
+ Reportes crm = new Reportes();
+    crm.setVisible(true);
+
+    dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btnReporteActionPerformed
 
     /**
      * @param args the command line arguments
